@@ -1,0 +1,34 @@
+# Variables
+@host = http://localhost:2006
+@version= v1.0
+@controller= projections
+@accept = application/json
+@projectionName= MunicipalityRegistry.Projections.Wfs.Municipality.MunicipalityHelperProjections
+@tableName= #TableName
+@schemaName= #schemaName
+
+### List projections
+GET {{host}}/{{version}}/{{controller}} HTTP/1.1
+Accept: {{accept}}
+
+
+### Start all projections
+POST {{host}}/{{version}}/{{controller}}/start/all HTTP/1.1
+Accept: {{accept}}
+
+### Stop all projections
+POST {{host}}/{{version}}/{{controller}}/stop/all HTTP/1.1
+Accept: {{accept}}
+
+
+### Start projection projections
+POST {{host}}/{{version}}/{{controller}}/start/{{projectionName}} HTTP/1.1
+Accept: {{accept}}
+
+### Stop all projections
+POST {{host}}/{{version}}/{{controller}}/stop/{{projectionName}} HTTP/1.1
+Accept: {{accept}}
+
+### Stop all projections
+Get {{host}}/{{version}}/{{controller}}/query/{{tableName}}/{{schemaName}} HTTP/1.1
+Accept: {{accept}}

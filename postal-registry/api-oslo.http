@@ -1,0 +1,17 @@
+# Variables
+@host = http://localhost:3012
+@version= v2
+@controller= postcodes
+@accept = application/ld+json
+
+### List
+GET {{host}}/{{version}}/{{controller}} HTTP/1.1
+Accept: {{accept}}
+
+### Get
+GET {{host}}/{{version}}/{{controller}}/1060 HTTP/1.1
+Accept: {{accept}}
+
+### Total Count
+GET {{host}}/{{version}}/{{controller}}/totaal-aantal HTTP/1.1
+Accept: {{accept}}

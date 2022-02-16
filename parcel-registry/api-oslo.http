@@ -1,0 +1,17 @@
+# Variables
+@host = http://localhost:7012
+@version= v2
+@controller= percelen
+@accept = application/ld+json
+
+### List
+GET {{host}}/{{version}}/{{controller}} HTTP/1.1
+Accept: {{accept}}
+
+### Get
+GET {{host}}/{{version}}/{{controller}}/11001B0001-00Z000 HTTP/1.1
+Accept: {{accept}}
+
+### Total Count
+GET {{host}}/{{version}}/{{controller}}/totaal-aantal HTTP/1.1
+Accept: {{accept}}

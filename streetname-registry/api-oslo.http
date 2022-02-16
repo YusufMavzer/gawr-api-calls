@@ -1,0 +1,17 @@
+# Variables
+@host = http://localhost:4012
+@version= v2
+@controller= straatnamen
+@accept = application/ld+json
+
+### List
+GET {{host}}/{{version}}/{{controller}} HTTP/1.1
+Accept: {{accept}}
+
+### Get
+GET {{host}}/{{version}}/{{controller}}/8 HTTP/1.1
+Accept: {{accept}}
+
+### Total Count
+GET {{host}}/{{version}}/{{controller}}/totaal-aantal HTTP/1.1
+Accept: {{accept}}

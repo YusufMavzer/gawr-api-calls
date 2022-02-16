@@ -1,0 +1,21 @@
+# Variables
+
+# @host = http://localhost:2080
+# @host = https://api.basisregisters.dev-vlaanderen.be
+@host = https://api.basisregisters.staging-vlaanderen.be
+# @host = https://api.basisregisters.vlaanderen.be
+@version = v2
+@accept = application/ld+json
+@service= postinfo
+
+### List PostInfo
+GET {{host}}/{{version}}/{{service}} HTTP/1.1
+Accept: {{accept}}
+
+### Get PostInfo
+GET {{host}}/{{version}}/{{service}}/1000 HTTP/1.1
+Accept: {{accept}}
+
+### Total count postinfo
+GET {{host}}/{{version}}/{{service}}/totaal-aantal HTTP/1.1
+Accept: {{accept}}

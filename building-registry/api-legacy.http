@@ -1,0 +1,30 @@
+# Variables
+@host = http://localhost:6002
+@version= v1
+@buildingController= gebouwen
+@buildingUnitController= gebouweenheden
+@accept = application/json
+
+### List
+GET {{host}}/{{version}}/{{buildingController}} HTTP/1.1
+Accept: {{accept}}
+
+### Get
+GET {{host}}/{{version}}/{{buildingController}}/5666548 HTTP/1.1
+Accept: {{accept}}
+
+### Total Count
+GET {{host}}/{{version}}/{{buildingController}}/totaal-aantal HTTP/1.1
+Accept: {{accept}}
+
+### List
+GET {{host}}/{{version}}/{{buildingUnitController}} HTTP/1.1
+Accept: {{accept}}
+
+### Get
+GET {{host}}/{{version}}/{{buildingUnitController}}/5667548 HTTP/1.1
+Accept: {{accept}}
+
+### Total Count
+GET {{host}}/{{version}}/{{buildingUnitController}}/totaal-aantal HTTP/1.1
+Accept: {{accept}}

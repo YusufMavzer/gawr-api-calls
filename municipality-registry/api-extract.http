@@ -1,0 +1,9 @@
+# Variables
+@host = http://localhost:2004
+@version= v1
+@controller= extract
+@accept = application/zip, application/octet-stream
+
+### List
+GET {{host}}/{{version}}/{{controller}} HTTP/1.1
+Accept: {{accept}}

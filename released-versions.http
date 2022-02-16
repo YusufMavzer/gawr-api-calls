@@ -1,0 +1,18 @@
+# Variables
+@test = https://api.basisregisters.dev-vlaanderen.be
+@staging = https://api.basisregisters.staging-vlaanderen.be
+@production = https://api.basisregisters.vlaanderen.be
+@version = v1
+@accept = application/json
+
+### Test
+GET {{test}}/{{version}}/versions HTTP/1.1
+Accept: {{accept}}
+
+### Staging
+GET {{staging}}/{{version}}/versions HTTP/1.1
+Accept: {{accept}}
+
+### Production
+GET {{production}}/{{version}}/versions HTTP/1.1
+Accept: {{accept}}
